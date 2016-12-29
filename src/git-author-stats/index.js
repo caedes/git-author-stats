@@ -5,6 +5,8 @@ import orderBy from 'lodash/orderBy';
 import reduce from 'lodash/reduce';
 import reverse from 'lodash/reverse';
 
+import authors from './authors';
+
 export default () => {
   const execSync = childProcess.execSync;
 
@@ -16,11 +18,7 @@ export default () => {
     reverse(stat.split('\t'))
   )));
 
-  const authorsCommand = "git log --format='%aN' | sort -u";
-  const authorsCommandResult = execSync(authorsCommand).toString('utf8');
-  const authors = compact(authorsCommandResult.split('\n'));
-
-  const stats = authors.map((author) => {
+  const stats = authors().map((author) => {
     const commits = parseInt(commitStatsPerAuthors[author], 10) || 0;
 
     const lineStatsCommand = `git log --no-merges --author="${author}" --pretty=tformat: --numstat`;
