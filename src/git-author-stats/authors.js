@@ -1,11 +1,9 @@
-import childProcess from 'child_process';
 import compact from 'lodash/compact';
 
-export default () => {
-  const execSync = childProcess.execSync;
+import command from '../lib/command';
 
-  const authorsCommand = "git log --format='%aN' | sort -u";
-  const authorsCommandResult = execSync(authorsCommand).toString('utf8');
+export default () => {
+  const authorsCommandResult = command("git log --format='%aN' | sort -u");
   const authors = compact(authorsCommandResult.split('\n'));
 
   return authors;
