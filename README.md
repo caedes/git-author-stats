@@ -2,9 +2,23 @@
 
 _Provide interesting statistics about Git authors on a single repository._
 
-## Lint
+## Getting Started
 
-Lint all `.js` files by: `npm run lint`
+Install:
+
+```shell
+npm install git-author-stats
+```
+
+Run the command:
+
+```shell
+git-author-stats
+```
+
+And obtain result as below:
+
+![git-author-stats](docs/git-author-stats.png)
 
 ## License
 
