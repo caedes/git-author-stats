@@ -21,14 +21,12 @@ const authors = [
   {
     names: [
       'caedes',
-      'Romain Laurent',
     ],
   },
   {
     names: [
       'maxime.degenne',
       'CDBDX\\maxime.degenne',
-      'Maxime Degenne',
       'U-CDBDX\\maxime.degenne',
     ],
   },
@@ -40,7 +38,6 @@ const authors = [
   {
     names: [
       'pascal.maria',
-      'Pascal Maria',
     ],
   },
   {
