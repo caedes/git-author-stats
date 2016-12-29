@@ -1,17 +1,23 @@
 #! /usr/bin/env node
 
-import chalk from 'chalk';
+import { bold, green, red } from 'chalk';
 import console from 'console';
 
 import gitAuthorStats from './git-author-stats';
 
 gitAuthorStats().forEach((gitAuthorStat) => {
-  const author = chalk.bold(gitAuthorStat.author);
-  const commits = `${gitAuthorStat.commits} commits`;
-  const added = chalk.green(`${gitAuthorStat.added} ++`);
-  const removed = chalk.red(`${gitAuthorStat.removed} --`);
+  const {
+    author,
+    commits,
+    added,
+    removed,
+  } = gitAuthorStat;
 
-  const authorStats = [commits, added, removed].join(' / ');
+  const gitAuthorText = [
+    `${commits} commits`,
+    green(`${added} ++`),
+    red(`${removed} --`),
+  ].join(' / ');
 
-  console.log(`${author}: ${authorStats}`);
+  console.log(`${bold(author)}: ${gitAuthorText}`);
 });
