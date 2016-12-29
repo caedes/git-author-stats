@@ -1,6 +1,6 @@
 {
   "name": "git-author-stats",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Git Author Statistics",
   "main": "bin/index.js",
   "scripts": {
