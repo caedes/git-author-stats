@@ -1,13 +1,13 @@
 #! /usr/bin/env node
 
-const childProcess = require('child_process');
-const compact = require('lodash/compact');
-const console = require('console');
-const chalk = require('chalk');
-const fromPairs = require('lodash/fromPairs');
-const reduce = require('lodash/reduce');
-const reverse = require('lodash/reverse');
-const orderBy = require('lodash/orderBy');
+import chalk from 'chalk';
+import childProcess from 'child_process';
+import compact from 'lodash/compact';
+import console from 'console';
+import fromPairs from 'lodash/fromPairs';
+import orderBy from 'lodash/orderBy';
+import reduce from 'lodash/reduce';
+import reverse from 'lodash/reverse';
 
 const execSync = childProcess.execSync;
 
