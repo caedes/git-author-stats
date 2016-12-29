@@ -1,31 +1,13 @@
 {
-  "name": "git-author-stats",
-  "version": "0.0.3",
-  "description": "Git Author Statistics",
-  "main": "bin/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/caedes/git-author-stats.git"
-  },
-  "keywords": [
-    "git",
-    "author",
-    "stat"
-  ],
   "author": "caedes",
-  "license": "MIT",
+  "bin": "./bin/index.js",
   "bugs": {
     "url": "https://github.com/caedes/git-author-stats/issues"
   },
-  "homepage": "https://github.com/caedes/git-author-stats#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "lodash": "^4.17.3"
   },
-  "bin": "./bin/index.js",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
@@ -36,7 +18,23 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0"
   },
+  "description": "Git Author Statistics",
+  "homepage": "https://github.com/caedes/git-author-stats#readme",
+  "keywords": [
+    "git",
+    "author",
+    "stat"
+  ],
+  "license": "MIT",
+  "main": "bin/index.js",
+  "name": "git-author-stats",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caedes/git-author-stats.git"
+  },
   "scripts": {
-    "lint": "eslint ."
-  }
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
 }
