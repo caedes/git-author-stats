@@ -9,7 +9,7 @@ const orderBy = require('lodash/orderBy');
 
 const execSync = childProcess.execSync;
 
-const commitsCommand = 'git shortlog -s -n --all';
+const commitsCommand = 'git shortlog -s -n --all --no-merges';
 const commitsCommandResult = execSync(commitsCommand).toString('utf8');
 const commitStats = compact(commitsCommandResult.split('\n'));
 
@@ -54,7 +54,7 @@ const stats = authors.map((author) => {
   const authorStats = author.names.map((name) => {
     const commits = parseInt(commitStatsPerAuthors[name], 10) || 0;
 
-    const lineStatsCommand = `git log --author="${name}" --pretty=tformat: --numstat`;
+    const lineStatsCommand = `git log --no-merges --author="${name}" --pretty=tformat: --numstat`;
     const lineStatsCommandResult = execSync(lineStatsCommand).toString('utf8');
     const lineStats = lineStatsCommandResult.split('\n');
     const lineStatsResult = lineStats.map(lineStat => (
