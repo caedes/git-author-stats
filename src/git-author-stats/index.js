@@ -10,7 +10,7 @@ export default () => {
   const execSync = childProcess.execSync;
 
   const stats = authors().map((author) => {
-    const commits = parseInt(commitStats[author], 10) || 0;
+    const commits = parseInt(commitStats()[author], 10) || 0;
 
     const lineStatsCommand = `git log --no-merges --author="${author}" --pretty=tformat: --numstat`;
     const lineStatsCommandResult = execSync(lineStatsCommand).toString('utf8');
