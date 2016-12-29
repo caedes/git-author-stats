@@ -2,7 +2,7 @@
   "name": "git-author-stats",
   "version": "0.0.2",
   "description": "Git Author Statistics",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,5 +25,5 @@
     "chalk": "^1.1.3",
     "lodash": "^4.17.3"
   },
-  "bin": "./index.js"
+  "bin": "./bin/index.js"
 }
