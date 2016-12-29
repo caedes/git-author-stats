@@ -5,6 +5,7 @@
     "url": "https://github.com/caedes/git-author-stats/issues"
   },
   "dependencies": {
+    "babel-cli": "^6.18.0",
     "chalk": "^1.1.3",
     "lodash": "^4.17.3"
   },
@@ -33,6 +34,7 @@
     "url": "git+https://github.com/caedes/git-author-stats.git"
   },
   "scripts": {
+    "build": "babel src/index.js -o bin/index.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
